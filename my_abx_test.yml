@@ -1,0 +1,56 @@
+name: Listening Test for Gustavo's Bachelor Thesis: "Do listeners perceive audible differences between a digitally mastered audio signal and the same signal that has been transferred to analog tape and back to digital?"
+
+welcome:
+  description: |-
+    ## Welcome to My ABX Test
+    You will hear two reference samples (A and B), and an unknown sample (X).
+    Your task: decide whether X is **A** or **B**.
+    Use headphones for best accuracy.
+  markdown: true
+
+options:
+  - name: sampleA
+    audioUrl: https://www.dropbox.com/scl/fi/0mptxd6sc3vyx15spjna4/GUSTAVOS-BA-THESIS-REC-SAMPLE-2.wav?raw1
+    tag: digital 
+  - name: sampleB
+    audioUrl: https://www.dropbox.com/scl/fi/4gxktwu3a6s8zkl2puxam/GUSTAVOS-BA-THESIS-REC-SAMPLE.wav?raw=1
+    tag: tape
+
+tests:
+  - name: A vs B Test
+    testType: ABX
+    options:
+      - sampleA
+      - sampleB
+    rounds: 10   
+
+form:
+  required: false
+  fields:
+    - name: age
+      type: number
+      label: Age (optional)
+    - name: experience
+      type: select
+      label: Audio experience level
+      options:
+        - Beginner
+        - Intermediate
+        - Advanced
+        - Professional
+    - name: confidence_rating
+      type: select
+      label: Confidence rating
+      options:
+        - 1 (very low)
+        - 2 (low)
+        - 3 (moderate)
+        - 4 (high)
+        - 5 (very high)
+
+results:
+  showResults: true
+  showAnswers: false
+  downloadResults: true
+
+email: gustavopardiniglaser@gmail.com
